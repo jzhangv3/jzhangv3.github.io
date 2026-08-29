@@ -17,7 +17,18 @@
     "cspell": "cspell lint \"**/*.{js,ts,jsx,tsx,astro,md,mdx,json,css}\" --no-progress",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
-    "fix:prettier": "prettier -w ."
+    "fix:prettier": "prettier -w .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx,astro}": [
+      "astro check",
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -39,7 +50,9 @@
     "eslint-plugin-astro": "^3.1.0",
     "eslint-plugin-prettier": "^5.5.6",
     "globals": "^17.11.0",
+    "husky": "^9.1.7",
     "jiti": "^2.7.0",
+    "lint-staged": "^17.4.1",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-css-order": "^2.2.0",
