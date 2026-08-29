@@ -1,0 +1,35 @@
+{
+  "$schema": "https://githubusercontent.com",
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["softwareTerms", "bash", "node", "typescript", "html", "css"],
+  "words": [
+    // Astro Specific Terms
+    "astro",
+    "clientload",
+    "clientvisible",
+    "clientidle",
+    "clientmedia",
+    "clientonly",
+    "frontmatter",
+    "getStaticPaths",
+    "shiki",
+    "viewtransitions",
+
+    // Project Exceptions
+    "jzhangv",
+    "amet",
+    "Ferreira",
+    "smushed"
+  ],
+  "flagWords": [],
+  "ignorePaths": [
+    ".astro/**",
+    ".git/**",
+    "dist/**",
+    "node_modules/**",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock"
+  ]
+}
