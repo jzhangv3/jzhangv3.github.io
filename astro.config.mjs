@@ -4,32 +4,32 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jzhangv3.github.io',
-  integrations: [mdx(), sitemap()],
+  integrations: [sitemap(), mdx()],
+
   fonts: [
     {
       provider: fontProviders.local(),
-      name: 'Atkinson',
-      cssVariable: '--font-atkinson',
-      fallbacks: ['sans-serif'],
+      name: 'Inter',
+      cssVariable: '--font-inter',
+      fallbacks: ['ui-sans-serif', 'system-ui'],
       options: {
         variants: [
           {
-            src: ['./src/assets/fonts/atkinson-regular.woff'],
-            weight: 400,
+            weight: '100 900',
             style: 'normal',
-            display: 'swap',
-          },
-          {
-            src: ['./src/assets/fonts/atkinson-bold.woff'],
-            weight: 700,
-            style: 'normal',
-            display: 'swap',
+            src: ['./src/assets/fonts/InterVariable.woff2'],
           },
         ],
       },
     },
   ],
+	
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
