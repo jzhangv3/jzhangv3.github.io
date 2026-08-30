@@ -6,10 +6,12 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import icon from 'astro-icon';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jzhangv3.github.io',
-  integrations: [sitemap(), mdx()],
+  integrations: [sitemap(), mdx(), icon()],
 
   fonts: [
     {
@@ -28,7 +30,7 @@ export default defineConfig({
       },
     },
   ],
-	
+    
   vite: {
     plugins: [tailwindcss()],
   },
