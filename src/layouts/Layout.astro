@@ -1,0 +1,53 @@
+---
+import '@assets/styles/global.css';
+
+import { Font } from 'astro:assets';
+import { getAsset } from '@utils/permalinks';
+
+import Favicons from '@components/common/Favicons.astro';
+import ApplyTheme from '@components/common/ApplyTheme.astro';
+import Metadata from '@components/common/Metadata.astro';
+import SiteVerification from '@components/common/SiteVerification.astro';
+import Analytics from '@components/common/Analytics.astro';
+import Intersect from '@components/common/Intersect.astro';
+
+// CONFIG: Comment the line below to disable View Transitions
+import { ClientRouter } from 'astro:transitions';
+
+import type { MetadataType } from '@types';
+
+export interface Props {
+  metadata?: Partial<MetadataType>;
+}
+
+const { metadata = {} } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" dir="ltr" class="2xl:text-xl">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="sitemap" href={getAsset('/sitemap-index.xml')} />
+    <Metadata {...metadata} />
+
+    <!-- Site Customization -->
+    <Favicons />
+    <Font cssVariable="--font-inter" preload />
+    <ApplyTheme />
+
+    <!-- Verification and Analytics -->
+    <SiteVerification />
+    <Analytics />
+
+    <!-- CONFIG: Comment the line below to disable View Transitions -->
+    <ClientRouter fallback="swap" />
+  </head>
+
+  <body class="text-text bg-background min-h-screen min-w-screen tracking-tight antialiased">
+    <slot />
+
+    <Intersect />
+  </body>
+</html>

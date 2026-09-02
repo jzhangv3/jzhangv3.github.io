@@ -3,6 +3,21 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist", ".output", "node_modules", "public", "pagefind"],
   "compilerOptions": {
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "paths": {
+      /** Path aliases for cleaner imports */
+      "@src/*": ["./src/*"],
+      "@public/*": ["./public/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@utils/*": ["./src/utils/*"],
+
+      /** Aliases for configuration and types */
+      "@config": ["./src/config.ts"],
+      "@types": ["./src/types.d.ts"],
+      "@content": ["./src/content.config.ts"]
+    }
   }
 }

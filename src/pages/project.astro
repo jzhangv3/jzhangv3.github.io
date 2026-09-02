@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ToggleTheme from '../components/common/ToggleTheme.astro';
+import { getHomePermalink } from '@src/utils/permalinks';
+---
+
+<Layout>
+  <h1>Project Page</h1>
+  <p>
+    This is the project page. You can add information about your projects here. Use this space to showcase your work,
+    provide details about your projects, and share any relevant links or resources.
+  </p>
+  <p><a href={getHomePermalink()}>Home</a></p>
+  <ToggleTheme />
+</Layout>

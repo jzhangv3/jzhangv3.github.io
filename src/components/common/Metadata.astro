@@ -1,0 +1,53 @@
+---
+import type { MetadataType } from '@types';
+import { METADATA as DEFAULT_METADATA } from '@config';
+import { getCanonical } from '@utils/permalinks';
+
+const {
+  title = DEFAULT_METADATA.title,
+  canonical = String(getCanonical(String(Astro.url.pathname))),
+  useTitleTemplate = DEFAULT_METADATA.useTitleTemplate,
+  description = DEFAULT_METADATA.description,
+  robots = DEFAULT_METADATA.robots,
+  openGraph = DEFAULT_METADATA.openGraph,
+} = Astro.props as Partial<MetadataType>;
+
+// 1. Determine Title (Apply template configured HERE if not ignored)
+const formattedTitle = title
+  ? useTitleTemplate
+    ? title + ' | ' + DEFAULT_METADATA.title
+    : title
+  : DEFAULT_METADATA.title;
+
+// 2. Parse Robots settings into a standard string
+const robotsValue = [
+  (robots.index ?? DEFAULT_METADATA.robots?.index ?? true) ? 'index' : 'noindex',
+  (robots.follow ?? DEFAULT_METADATA.robots?.follow ?? true) ? 'follow' : 'nofollow',
+]
+  .filter(Boolean)
+  .join(', ');
+
+// 3. Parse Open Graph image URL if provided
+const image: { url: string } | null = openGraph.images?.[0] || DEFAULT_METADATA.openGraph.images?.[0] || null;
+---
+
+<!-- Standard Meta Tags -->
+<title>{formattedTitle}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={robotsValue} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={openGraph.type || 'website'} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={formattedTitle} />
+<meta property="og:description" content={description} />
+{image && <meta property="og:image" content={new URL(image.url, Astro.url)} />}
+{openGraph.site_name && <meta property="og:site_name" content={openGraph.site_name} />}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={formattedTitle} />
+<meta property="twitter:description" content={description} />
+{image && <meta property="twitter:image" content={new URL(image.url, Astro.url)} />}

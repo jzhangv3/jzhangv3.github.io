@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+:root {
+  --neutral-1: #f2f5f3;
+  --neutral-2: #e4ebe6;
+  --neutral-3: #b6bfb8;
+  --neutral-4: #909692;
+  --neutral-5: #232925;
+  --neutral-6: #101411;
+
+  --primary-1: #bfffd1;
+  --primary-2: #8cf2a6;
+  --primary-3: #5fed83;
+  --primary-4: #0fbf3e;
+  --primary-5: #08872b;
+  --primary-6: #0a241b;
+
+  --text: var(--neutral-5);
+  --text-bright: var(--neutral-6);
+  --text-muted: var(--neutral-4);
+  --background: var(--neutral-1);
+  --background-alt: var(--neutral-2);
+  --background-code: #ffffff;
+  --border: var(--neutral-3);
+  --link: var(--primary-4);
+  --link-hover: var(--primary-5);
+
+  --info: #3d84f5;
+  --success: #20974c;
+  --warning: #faad14;
+  --error: #ff4d4f;
+  --special: #974dff;
+
+  --text-code: hsl(0, 0%, 45%);
+  --background-code: hsl(0, 0%, 90%);
+}
+
+.dark {
+  --text: var(--neutral-2);
+  --text-bright: var(--neutral-1);
+  --text-muted: var(--neutral-3);
+  --background: var(--neutral-6);
+  --background-alt: var(--neutral-5);
+
+  --border: var(--neutral-4);
+  --link: var(--primary-4);
+  --link-hover: var(--primary-3);
+
+  --info: #3d84f5;
+  --success: #20974c;
+  --warning: #faad14;
+  --error: #ff4d4f;
+  --special: #974dff;
+
+  --text-code: hsl(0, 0%, 65%);
+  --background-code: hsl(0, 0%, 15%);
+}
