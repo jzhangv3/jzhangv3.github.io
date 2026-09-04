@@ -25,7 +25,7 @@ const { label = 'Toggle Theme', class: className = '', iconClass = 'h-6 w-6 fill
             cy="4"
             r="4"
             fill="black"
-            class="group-dark:-translate-x-1.25 group-dark:translate-y-1.25 origin-center transition-all duration-500 ease-in-out"
+            class="group-dark:-translate-x-1.25 group-dark:translate-y-1.25 origin-center transition-transform ease-in-out"
           ></circle>
         </mask>
       </defs>
@@ -35,14 +35,14 @@ const { label = 'Toggle Theme', class: className = '', iconClass = 'h-6 w-6 fill
         cy="12"
         r="5"
         mask="url(#theme-toggle-mask)"
-        class="group-dark:scale-200 origin-center transition-all duration-500 ease-in-out"></circle>
+        class="group-dark:scale-200 origin-center transition-transform ease-in-out"></circle>
       <!-- Outer Rays Group -->
       <g
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="group-dark:scale-0 group-dark:opacity-0 origin-center transition-all duration-500 ease-in-out"
+        class="group-dark:scale-0 group-dark:opacity-0 origin-center transition-transform ease-in-out"
       >
         <line x1="12" y1="2" x2="12" y2="4"></line>
         <line x1="12" y1="20" x2="12" y2="22"></line>
