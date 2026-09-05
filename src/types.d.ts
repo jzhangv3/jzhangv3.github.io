@@ -2,9 +2,10 @@ export interface SiteType {
   name: string;
   site: string;
   base: string;
-  trailingSlash: boolean;
+  trailingSlash: 'ignore' | 'always' | 'never';
   googleSiteVerificationId: string;
   googleAnalytics: string | null;
+  date: string;
 }
 
 export interface MetadataType {

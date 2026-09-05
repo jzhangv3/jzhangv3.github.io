@@ -1,15 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ToggleTheme from '../components/common/ToggleTheme.astro';
+import Layout from '@layouts/PageLayout.astro';
 import { getPermalink } from '@src/utils/permalinks';
 ---
 
 <Layout metadata={{ title: 'Jimmy Zhang', useTitleTemplate: false }}>
-  <h1>🧑‍🚀 Hello, Astronaut!</h1>
-  <p>
-    Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template serves as a lightweight,
-    minimally-styled starting point for anyone looking to build a personal website, blog, or portfolio with Astro.
+  <h1>Hello, World!</h1>
+  <p class="flex flex-col gap-2">
+    <span
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni minus dolore aspernatur cumque, maxime error sequi
+      vero voluptatibus? Aliquid repudiandae labore inventore adipisci itaque deserunt. Exercitationem doloremque
+      dolores soluta nam!</span
+    ><span
+      >Vero tempora, laboriosam dolorem repellat nobis reiciendis accusamus consectetur, voluptatem est distinctio,
+      expedita quas eligendi itaque vitae cumque? Velit tempore est distinctio rerum asperiores totam dolor id?
+      Mollitia, aliquam provident.</span
+    ><span
+      >Quidem, velit quas sapiente odit quod doloribus nulla, suscipit veniam dolor quo totam, praesentium repudiandae.
+      Nesciunt laboriosam eos ipsa placeat. Consequatur, nobis. Ullam dolorum illum reiciendis et minus quod aliquam.</span
+    ><span
+      >Perspiciatis praesentium, non ducimus asperiores laudantium nobis repudiandae fugiat, voluptatum perferendis
+      doloribus obcaecati illum labore quia natus, quae quidem facere accusantium cumque dolores ipsa est eum
+      voluptates! Consequuntur, possimus nesciunt?</span
+    ><span
+      >Animi reprehenderit quaerat voluptatibus neque molestiae quam, ipsum repudiandae debitis repellendus, totam
+      commodi laboriosam impedit veniam officia, minus vitae similique error. Sunt architecto quos tempora sapiente
+      cupiditate non quod corporis.</span
+    >
   </p>
   <p><a href={getPermalink('/project/')}>Project</a></p>
-  <ToggleTheme />
 </Layout>

@@ -32,7 +32,7 @@ Global Color Palette ===== https://shadcn-svelte.com/themes ====
   --color-text-bright: var(--text-bright);
   --color-text-muted: var(--text-muted);
   --color-background: var(--background);
-  --color-background-alt: var(--background-alt);
+
   --color-border: var(--border);
   --color-link: var(--link);
   --color-link-hover: var(--link-hover);
@@ -43,16 +43,9 @@ Global Color Palette ===== https://shadcn-svelte.com/themes ====
   --color-error: var(--error);
   --color-special: var(--special);
 
-  --color-text-code: var(--text-code);
-  --color-background-code: var(--background-code);
-
   /* Set colors (unified colors with modules) */
   --shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
   --backdrop: rgba(0, 0, 0, 0.5);
-
-  /* Layout styles */
-  --sidebar-width: 260px;
-  --content-max-width: 768px;
 }
 
 @layer base {

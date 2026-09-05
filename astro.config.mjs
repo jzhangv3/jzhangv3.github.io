@@ -2,6 +2,7 @@
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import { SITE } from '@config';
 import { defineConfig, fontProviders } from 'astro/config';
 import path from 'path';
 
@@ -10,7 +11,9 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jzhangv3.github.io',
+  site: SITE.site,
+  base: SITE.base,
+  trailingSlash: SITE.trailingSlash,
   integrations: [sitemap(), mdx(), icon()],
 
   fonts: [

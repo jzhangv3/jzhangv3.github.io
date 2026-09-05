@@ -5,12 +5,16 @@ interface Props {
   iconClass?: string;
 }
 
-const { label = 'Toggle Theme', class: className = '', iconClass = 'h-6 w-6 fill-current text-current' } = Astro.props;
+const {
+  label = 'Toggle Theme',
+  class: className = '',
+  iconClass = '-ml-1 h-6 w-6 fill-current p-0.75 text-current',
+} = Astro.props;
 ---
 
 <theme-toggle style="display: contents">
   <button
-    class={'group cursor-pointer select-none items-center float-right p-2 ' + className}
+    class={'group cursor-pointer select-none items-center float-right' + className}
     title={label}
     data-theme-toggle
   >

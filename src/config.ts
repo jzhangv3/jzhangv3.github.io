@@ -1,13 +1,16 @@
-export const SITE = {
+import type { MetadataType, SiteType } from './types';
+
+export const SITE: SiteType = {
   name: 'Jimmy Zhang',
   site: 'https://jzhangv3.github.io',
   base: '/',
-  trailingSlash: false,
+  trailingSlash: 'ignore',
   googleSiteVerificationId: 'fGNZs8TlhmprZRNsvKVOp4ZPHQCcQ3EQvGt4VP7H1eY',
   googleAnalytics: null,
+  date: new Date().toISOString().split('T')[0],
 };
 
-export const METADATA = {
+export const METADATA: MetadataType = {
   title: SITE.name,
   useTitleTemplate: true,
   description:

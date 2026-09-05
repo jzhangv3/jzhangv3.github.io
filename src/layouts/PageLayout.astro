@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/widgets/Header.astro';
+import Footer from '@components/widgets/Footer.astro';
+
+import type { MetadataType } from '@types';
+
+export interface Props {
+  metadata?: Partial<MetadataType>;
+}
+
+const { metadata } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+    <Header />
+  </slot>
+  <main class="bg-background mb-10 p-4 pt-16">
+    <slot />
+  </main>
+  <slot name="footer">
+    <Footer />
+  </slot>
+</Layout>

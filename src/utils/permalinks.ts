@@ -61,9 +61,9 @@ export const cleanSlug = (text = '') =>
  */
 export const getCanonical = (path = ''): string | URL => {
   const url = String(new URL(path, SITE.site));
-  if (SITE.trailingSlash === false && path && url.endsWith('/')) {
+  if (SITE.trailingSlash === 'always' && path && url.endsWith('/')) {
     return url.slice(0, -1);
-  } else if (SITE.trailingSlash === true && path && !url.endsWith('/')) {
+  } else if (SITE.trailingSlash === 'never' && path && !url.endsWith('/')) {
     return url + '/';
   }
   return url;

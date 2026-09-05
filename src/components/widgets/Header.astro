@@ -1,0 +1,14 @@
+---
+import ToggleTheme from '@components/common/ToggleTheme.astro';
+import { getHomePermalink, getPermalink } from '@src/utils/permalinks';
+---
+
+<header class="shadow-border bg-background fixed top-0 flex w-full items-center justify-between px-4 py-3 shadow-sm">
+  <a href="#" class="font-bold">Jimmy Zhang</a>
+  <nav class="flex gap-4">
+    <a href={getHomePermalink()} class="hover:underline">Home</a>
+    <a href={getPermalink('/project/')} class="hover:underline">Project</a>
+    <a href={getPermalink('/blog/')} class="hover:underline">Blog</a>
+    <ToggleTheme />
+  </nav>
+</header>

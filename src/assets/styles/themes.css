@@ -19,9 +19,8 @@
   --text-bright: var(--neutral-6);
   --text-muted: var(--neutral-4);
   --background: var(--neutral-1);
-  --background-alt: var(--neutral-2);
-  --background-code: #ffffff;
-  --border: var(--neutral-3);
+
+  --border: var(--neutral-2);
   --link: var(--primary-4);
   --link-hover: var(--primary-5);
 
@@ -30,9 +29,6 @@
   --warning: #faad14;
   --error: #ff4d4f;
   --special: #974dff;
-
-  --text-code: hsl(0, 0%, 45%);
-  --background-code: hsl(0, 0%, 90%);
 }
 
 .dark {
@@ -40,9 +36,8 @@
   --text-bright: var(--neutral-1);
   --text-muted: var(--neutral-3);
   --background: var(--neutral-6);
-  --background-alt: var(--neutral-5);
 
-  --border: var(--neutral-4);
+  --border: var(--neutral-5);
   --link: var(--primary-4);
   --link-hover: var(--primary-3);
 
@@ -51,7 +46,4 @@
   --warning: #faad14;
   --error: #ff4d4f;
   --special: #974dff;
-
-  --text-code: hsl(0, 0%, 65%);
-  --background-code: hsl(0, 0%, 15%);
 }
