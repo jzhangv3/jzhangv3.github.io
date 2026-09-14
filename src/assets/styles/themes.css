@@ -1,49 +1,37 @@
 @import 'tailwindcss';
 
 :root {
-  --neutral-1: #f2f5f3;
-  --neutral-2: #e4ebe6;
-  --neutral-3: #b6bfb8;
-  --neutral-4: #909692;
-  --neutral-5: #232925;
-  --neutral-6: #101411;
+  --text: var(--color-neutral-900);
+  --text-muted: var(--color-neutral-800);
 
-  --primary-1: #bfffd1;
-  --primary-2: #8cf2a6;
-  --primary-3: #5fed83;
-  --primary-4: #0fbf3e;
-  --primary-5: #08872b;
-  --primary-6: #0a241b;
+  --bg: var(--color-neutral-100);
+  --border: var(--color-neutral-200);
+  --outline: var(--color-neutral-300);
 
-  --text: var(--neutral-5);
-  --text-bright: var(--neutral-6);
-  --text-muted: var(--neutral-4);
-  --background: var(--neutral-1);
+  --primary: var(--color-emerald-600);
+  --primary-hover: var(--color-emerald-800);
 
-  --border: var(--neutral-2);
-  --link: var(--primary-4);
-  --link-hover: var(--primary-5);
-
-  --info: #3d84f5;
-  --success: #20974c;
-  --warning: #faad14;
-  --error: #ff4d4f;
-  --special: #974dff;
+  --info: var(--color-blue-600);
+  --success: var(--color-green-600);
+  --warning: var(--color-yellow-600);
+  --error: var(--color-red-600);
+  --special: var(--color-purple-600);
 }
 
 .dark {
-  --text: var(--neutral-2);
-  --text-bright: var(--neutral-1);
-  --text-muted: var(--neutral-3);
-  --background: var(--neutral-6);
+  --text: var(--color-neutral-100);
+  --text-muted: var(--color-neutral-200);
 
-  --border: var(--neutral-5);
-  --link: var(--primary-4);
-  --link-hover: var(--primary-3);
+  --bg: var(--color-neutral-900);
+  --border: var(--color-neutral-800);
+  --outline: var(--color-neutral-700);
 
-  --info: #3d84f5;
-  --success: #20974c;
-  --warning: #faad14;
-  --error: #ff4d4f;
-  --special: #974dff;
+  --primary: var(--color-emerald-500);
+  --primary-hover: var(--color-emerald-300);
+
+  --info: var(--color-blue-500);
+  --success: var(--color-green-500);
+  --warning: var(--color-yellow-500);
+  --error: var(--color-red-500);
+  --special: var(--color-purple-500);
 }

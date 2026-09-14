@@ -13,29 +13,16 @@ Global Color Palette ===== https://shadcn-svelte.com/themes ====
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* [Tailwind] Color Palette */
-  --color-neutral-1: var(--neutral-1);
-  --color-neutral-2: var(--neutral-2);
-  --color-neutral-3: var(--neutral-3);
-  --color-neutral-4: var(--neutral-4);
-  --color-neutral-5: var(--neutral-5);
-  --color-neutral-6: var(--neutral-6);
-
-  --color-primary-1: var(--primary-1);
-  --color-primary-2: var(--primary-2);
-  --color-primary-3: var(--primary-3);
-  --color-primary-4: var(--primary-4);
-  --color-primary-5: var(--primary-5);
-  --color-primary-6: var(--primary-6);
-
+  /* Theme variables */
   --color-text: var(--text);
-  --color-text-bright: var(--text-bright);
   --color-text-muted: var(--text-muted);
-  --color-background: var(--background);
 
+  --color-bg: var(--bg);
   --color-border: var(--border);
-  --color-link: var(--link);
-  --color-link-hover: var(--link-hover);
+  --color-outline: var(--outline);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
 
   --color-info: var(--info);
   --color-success: var(--success);
@@ -43,10 +30,25 @@ Global Color Palette ===== https://shadcn-svelte.com/themes ====
   --color-error: var(--error);
   --color-special: var(--special);
 
-  /* Set colors (unified colors with modules) */
-  --shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
-  --backdrop: rgba(0, 0, 0, 0.5);
+  /* Additional theme variables */
 }
 
 @layer base {
+  main {
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: transparent;
+    color: var(--color-primary-hover);
+  }
+
+  button,
+  a {
+    color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-primary-hover);
+    }
+  }
 }

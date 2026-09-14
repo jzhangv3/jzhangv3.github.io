@@ -13,10 +13,11 @@ const { metadata } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
+  <a href="#main" class="sr-only focus:not-sr-only"> Skip to main content </a>
   <slot name="header">
     <Header />
   </slot>
-  <main class="bg-background mb-10 p-4 pt-16">
+  <main id="main" class="bg-bg relative z-1 p-4 pt-16">
     <slot />
   </main>
   <slot name="footer">

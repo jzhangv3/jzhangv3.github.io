@@ -1,7 +1,9 @@
 ---
 import { SITE } from '@config';
+import ToggleTheme from '@components/common/ToggleTheme.astro';
 ---
 
-<footer class="bg-border/80 fixed bottom-0 -z-1 w-full p-2">
+<footer class="bg-border sticky bottom-0 z-0 flex w-full flex-row justify-between p-2">
   <p>Last updated: {SITE.date}</p>
+  <ToggleTheme />
 </footer>
