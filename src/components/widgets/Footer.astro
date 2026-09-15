@@ -1,9 +1,23 @@
 ---
 import { SITE } from '@config';
 import ToggleTheme from '@components/common/ToggleTheme.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
-<footer class="bg-border sticky bottom-0 z-0 mt-auto flex w-full flex-row justify-between px-4 py-6">
-  <p>Last updated: {SITE.date}</p>
-  <ToggleTheme />
+<footer
+  class="bg-border text-text-muted sticky bottom-0 z-0 flex w-full flex-row items-center justify-between px-4 py-6 text-sm"
+>
+  <div class="flex flex-col gap-2">
+    <p>Contact: (@ (. jzhang v3) (. gmail com))</p>
+    <p>Last updated: {SITE.date}</p>
+  </div>
+  <div class="grid grid-cols-2 gap-1">
+    <ToggleTheme class="col-span-2 *:float-right" />
+    <a href="https://github.com/jzhangv3">
+      <Icon name="mingcute:github-line" class="h-6 w-6" />
+    </a>
+    <a href="https://www.linkedin.com/in/jzhangv3/">
+      <Icon name="mingcute:linkedin-line" class="h-6 w-6" />
+    </a>
+  </div>
 </footer>
