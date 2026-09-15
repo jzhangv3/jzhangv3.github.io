@@ -8,7 +8,7 @@ interface Props {
 const {
   label = 'Toggle Theme',
   class: className = '',
-  iconClass = '-ml-1 h-6 w-6 fill-current p-0.75 text-current',
+  iconClass = 'h-6 w-6 p-0.5 fill-current text-current',
 } = Astro.props;
 ---
 
@@ -19,7 +19,7 @@ const {
     data-theme-toggle
   >
     <!-- Single Combined Smooth Animated SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class={iconClass}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class={iconClass} height="24" width="24">
       <defs>
         <!-- The Mask creates the crescent moon shape by subtracting a circle -->
         <mask id="theme-toggle-mask">

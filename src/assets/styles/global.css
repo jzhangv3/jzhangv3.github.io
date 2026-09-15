@@ -34,12 +34,8 @@ Global Color Palette ===== https://shadcn-svelte.com/themes ====
 }
 
 @layer base {
-  main {
-    min-height: 100vh;
-  }
-
   ::selection {
-    background-color: transparent;
+    background-color: var(--color-border);
     color: var(--color-primary-hover);
   }
 
