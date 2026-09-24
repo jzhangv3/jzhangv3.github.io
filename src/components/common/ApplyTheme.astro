@@ -1,9 +1,9 @@
-<script>
-  function applyTheme(theme: string) {
+<script is:inline>
+  function applyTheme(theme) {
     document.documentElement.classList[theme === 'dark' ? 'add' : 'remove']('dark');
   }
 
-  function resolveTheme(): string {
+  function resolveTheme() {
     const localStorageTheme = localStorage?.getItem('theme') ?? '';
     if (['dark', 'light'].includes(localStorageTheme)) {
       return localStorageTheme;
@@ -15,6 +15,4 @@
   }
 
   applyTheme(resolveTheme());
-
-  document.addEventListener('astro:after-swap', () => applyTheme(resolveTheme()));
 </script>

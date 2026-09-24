@@ -11,9 +11,6 @@ import SiteVerification from '@components/common/SiteVerification.astro';
 import Analytics from '@components/common/Analytics.astro';
 import Intersect from '@components/common/Intersect.astro';
 
-// CONFIG: Comment the line below to disable View Transitions
-import { ClientRouter } from 'astro:transitions';
-
 import type { MetadataType } from '@types';
 
 export interface Props {
@@ -24,7 +21,7 @@ const { metadata = {} } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" dir="ltr" class="min-w-xs 2xl:text-xl">
+<html lang="en" dir="ltr" class="min-w-xs scroll-smooth 2xl:text-xl">
   <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
@@ -40,9 +37,6 @@ const { metadata = {} } = Astro.props;
     <!-- Verification and Analytics -->
     <SiteVerification />
     <Analytics />
-
-    <!-- CONFIG: Comment the line below to disable View Transitions -->
-    <ClientRouter fallback="swap" />
   </head>
 
   <body class="text-text bg-bg flex flex-col tracking-tight antialiased">

@@ -1,7 +1,8 @@
 {
   "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
   "files.associations": {
-    "*.mdx": "markdown"
+    "*.mdx": "markdown",
+    "*.css": "tailwindcss"
   },
   "prettier.documentSelectors": ["**/*.astro"],
   "eslint.useFlatConfig": true

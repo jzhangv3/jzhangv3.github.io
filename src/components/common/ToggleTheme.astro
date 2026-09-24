@@ -5,6 +5,10 @@ interface Props {
   iconClass?: string;
 }
 
+// Needs [5px] translation for it is not affected by the rem size scaling
+const mask_class =
+  'group-dark:-translate-x-[5px] group-dark:translate-y-[5px] origin-center transition-transform ease-in-out';
+
 const {
   label = 'Toggle Theme',
   class: className = '',
@@ -24,13 +28,8 @@ const {
         <!-- The Mask creates the crescent moon shape by subtracting a circle -->
         <mask id="theme-toggle-mask">
           <circle cx="12" cy="12" r="12" fill="white"></circle>
-          <circle
-            cx="20"
-            cy="4"
-            r="4"
-            fill="black"
-            class="group-dark:-translate-x-1.25 group-dark:translate-y-1.25 origin-center transition-transform ease-in-out"
-          ></circle>
+          <!-- tailwind -->
+          <circle cx="20" cy="4" r="4" fill="black" class={mask_class}></circle>
         </mask>
       </defs>
       <!-- Center Icon Core (Transforms between Full Sun and Crescent Moon) -->

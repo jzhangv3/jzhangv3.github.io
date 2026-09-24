@@ -14,7 +14,7 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash,
-  integrations: [sitemap(), mdx(), icon()],
+  integrations: [sitemap(), mdx(), icon({ iconDir: 'src/assets/icons' })],
 
   fonts: [
     {
