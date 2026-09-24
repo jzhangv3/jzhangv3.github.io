@@ -29,16 +29,13 @@ Global Color Palette ===== https://shadcn-svelte.com/themes ====
   --color-warning: var(--warning);
   --color-error: var(--error);
   --color-special: var(--special);
-
-  /* Additional theme variables */
-  --default-transition-duration: 300ms;
 }
 
 @layer base {
   *,
   ::before,
   ::after {
-    @apply transition-colors outline-primary/50 outline-offset-2;
+    @apply outline-primary/50 outline-offset-2;
   }
 
   ::selection {
